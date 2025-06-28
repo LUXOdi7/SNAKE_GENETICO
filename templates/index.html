@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake AI: Comparación de Algoritmos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Snake AI: Comparación de Algoritmos de Búsqueda y Genéticos</h1>
+        <button id="resetButton">Reiniciar Juego</button>
+        <button id="nextStepButton">Siguiente Paso</button> <div class="game-area">
+            <div class="game-column">
+                <h2>Algoritmo A*</h2>
+                <div class="game-board" id="gameBoardAStar">
+                    <img id="snakeImageAStar" src="" alt="Juego Snake A*">
+                </div>
+                <div class="game-stats">
+                    <p>Tiempo de Cálculo: <span id="timeAStar">0s</span></p>
+                    <p>Pasos en Camino: <span id="stepsAStar">0</span></p>
+                    <p>Manzanas Comidas: <span id="applesEatenAStar">0</span>/5</p>
+                    <p>Estado: <span id="gameOverAStar">Jugando</span></p>
+                    <p>Nodos Abiertos: <span id="openNodesAStar">0</span></p>
+                    <p>Nodos Cerrados: <span id="closedNodesAStar">0</span></p>
+                </div>
+            </div>
+
+            <div class="game-column">
+                <h2>Algoritmo BFS</h2>
+                <div class="game-board" id="gameBoardBFS">
+                    <img id="snakeImageBFS" src="" alt="Juego Snake BFS">
+                </div>
+                <div class="game-stats">
+                    <p>Tiempo de Cálculo: <span id="timeBFS">0s</span></p>
+                    <p>Pasos en Camino: <span id="stepsBFS">0</span></p>
+                    <p>Manzanas Comidas: <span id="applesEatenBFS">0</span>/5</p>
+                    <p>Estado: <span id="gameOverBFS">Jugando</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area second-row">
+            <div class="game-column">
+                <h2>Algoritmo DFS</h2>
+                <div class="game-board" id="gameBoardDFS">
+                    <img id="snakeImageDFS" src="" alt="Juego Snake DFS">
+                </div>
+                <div class="game-stats">
+                    <p>Tiempo de Cálculo: <span id="timeDFS">0s</span></p>
+                    <p>Pasos en Camino: <span id="stepsDFS">0</span></p>
+                    <p>Manzanas Comidas: <span id="applesEatenDFS">0</span>/5</p>
+                    <p>Estado: <span id="gameOverDFS">Jugando</span></p>
+                </div>
+            </div>
+
+            <div class="game-column">
+                <h2>Algoritmo Genético (AG)</h2>
+                <div class="game-board" id="gameBoardGA">
+                    <img id="snakeImageGA" src="" alt="Juego Snake AG">
+                </div>
+                <div class="game-stats">
+                    <p>Tiempo de Cálculo: <span id="timeGA">0s</span></p>
+                    <p>Pasos en Camino: <span id="stepsGA">0</span></p>
+                    <p>Manzanas Comidas: <span id="applesEatenGA">0</span>/5</p>
+                    <p>Estado: <span id="gameOverGA">Jugando</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/snake.js') }}"></script>
+</body>
+</html>
